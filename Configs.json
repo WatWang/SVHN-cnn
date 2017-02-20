@@ -1,0 +1,35 @@
+{
+    "Auto_setting":{
+        "keep_prob":0.8,
+        "pre_trained_model":"VGG-C3/Saved_Model-4",
+        "recent_model_name":"VGG-C3/Saved_Model-5"
+    },
+    "Test_option":{
+        "batch_size":128,
+        "data_name":"test_32x32.mat",
+        "keep_prob":0.8,
+        "model_load_name":"Model-B/Saved_Model-4",
+        "model_path":"model",
+        "num_class":10,
+        "record_name":"Model-C_Adam/Saved_Model-1",
+        "save_record":"test_label.xlsx"
+    },
+    "Train_option":{
+        "already_train_times":5,
+        "batch_size":256,
+        "data_name":"train_32x32.mat",
+        "keep_prob":0.8,
+        "learning_rate":0.0001,
+        "model_load_name":"VGG-C3/Saved_Model-4",
+        "model_path":"model",
+        "model_save_name":"VGG-C3/Saved_Model",
+        "num_class":10,
+        "optimize_option":"Grad",
+        "pre_trained":true,
+        "range_times":1,
+        "record_path":"record",
+        "save_model":true,
+        "sleep_time":1.5,
+        "tensorboard":false
+    }
+}
