@@ -1,0 +1,36 @@
+{
+    "Layer_1":{
+        "layer_type":"conv",
+        "output_size": [64,64]
+    },
+    "Layer_2":{
+        "layer_type":"conv",
+        "output_size": [128,128]
+    },
+    "Layer_3":{
+        "layer_type":"conv",
+        "output_size": [256,256,256]
+    },
+    "Layer_4":{
+        "layer_type":"conv",
+        "output_size": [512,512,512]
+    },
+    "Layer_5":{
+        "layer_type":"conv",
+        "output_size": [512,512,512]
+    },
+    "Layer_6":{
+        "layer_type":"linear",
+        "output_size": 1024,
+	  "dropout_switch" : true
+    },
+    "Layer_7":{
+        "layer_type":"linear",
+        "output_size": 256,
+	  "dropout_switch" : true
+    },
+    "Layer_8":{
+        "layer_type":"linear",
+        "output_size": 10
+    }
+}
