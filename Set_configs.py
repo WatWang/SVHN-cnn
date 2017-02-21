@@ -77,6 +77,7 @@ def set_configs(config,Framework_name_in, for_train = True, Auto = True):
         # Check if the model exist
         if max_1 == -1 and max_2 == -1:
             config['Auto_setting']['pre_trained_model'] = None
+            config['Train_option']['already_train_times'] = 0
         else:
             # List model direction
             model_list = os.listdir(model_dir)
@@ -96,6 +97,10 @@ def set_configs(config,Framework_name_in, for_train = True, Auto = True):
                 config['Train_option']['already_train_times'] = int(num_index) + 1
                 if not config['Train_option']['pre_trained']:
                     config['Train_option']['already_train_times'] = 0
+                    
+    # If no model exist, already train times = 0
+    else:
+        config['Train_option']['already_train_times'] = 0
 
     # Protect if not for train
     if not for_train:
